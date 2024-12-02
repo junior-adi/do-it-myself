@@ -104,7 +104,6 @@ feat: Implement standalone URL parser in C
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
- */
 #ifndef URL_PARSER_H
 #define URL_PARSER_H
 
