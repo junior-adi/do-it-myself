@@ -385,9 +385,9 @@ NOTE : `You can easily integrate this file into any project by simply copying it
 
 
 Citations:
-[1] https://www.reddit.com/r/unpopularopinion/comments/t2cihz/i_dont_always_need_to_provide_sources/
-[2] https://www.linkedin.com/pulse/information-without-source-adesh-tamrakar
-[3] https://gitlab.kitware.com/cmake/cmake/-/issues/17978
-[4] https://stackoverflow.com/questions/26462227/debugging-with-gdb-without-sources
-[5] https://stackoverflow.com/questions/40223903/cmake-how-to-include-headers-without-sources
-[6] https://strategylab.ca/parts-of-a-url/
+* [1] https://www.reddit.com/r/unpopularopinion/comments/t2cihz/i_dont_always_need_to_provide_sources/
+* [2] https://www.linkedin.com/pulse/information-without-source-adesh-tamrakar
+* [3] https://gitlab.kitware.com/cmake/cmake/-/issues/17978
+* [4] https://stackoverflow.com/questions/26462227/debugging-with-gdb-without-sources
+* [5] https://stackoverflow.com/questions/40223903/cmake-how-to-include-headers-without-sources
+* [6] https://strategylab.ca/parts-of-a-url/
