@@ -6,7 +6,7 @@
 #include <string.h>
 #include <ctype.h>
 
-/* Structure pour stocker les composants de l'URL */
+/* Structure to store URL components */
 typedef struct {
     char *scheme;
     char *user;
@@ -18,7 +18,7 @@ typedef struct {
     char *fragment;
 } Url;
 
-/* Fonction pour initialiser un Url vide */
+/* Function to initialize an empty Url */
 Url *url_create() {
     Url *url = (Url *)malloc(sizeof(Url));
     if (!url) return NULL;
@@ -26,14 +26,14 @@ Url *url_create() {
     url->user = NULL;
     url->password = NULL;
     url->host = NULL;
-    url->port = -1; // Indique qu'il n'y a pas de port
+    url->port = -1; // Indicates no port
     url->path = NULL;
     url->query = NULL;
     url->fragment = NULL;
     return url;
 }
 
-/* Fonction pour libérer la mémoire associée à une structure Url */
+/* Function to free memory associated with a Url structure */
 void url_free(Url *url) {
     if (!url) return;
     free(url->scheme);
@@ -46,7 +46,7 @@ void url_free(Url *url) {
     free(url);
 }
 
-/* Fonction pour décoder une chaîne d'URL encodée (ex : %20 -> espace) */
+/* Function to decode a URL-encoded string (e.g., %20 -> space) */
 char *url_decode(const char *encoded) {
     if (!encoded) return NULL;
 
@@ -68,7 +68,7 @@ char *url_decode(const char *encoded) {
     return decoded;
 }
 
-/* Fonction principale pour parser une URL */
+/* Main function to parse a URL */
 Url *url_parse(const char *url_string) {
     if (!url_string) return NULL;
 
@@ -124,15 +124,15 @@ Url *url_parse(const char *url_string) {
     return url;
 }
 
-// Fonction pour nettoyer et valider l'URL
+// Function to clean and validate the URL
 char* clean_url(const char *url) {
     if (!url) return NULL;
 
-    // Utiliser url_parse pour décomposer l'URL
+    // Use url_parse to decompose the URL
     Url *parsed_url = url_parse(url);
     if (!parsed_url) return NULL;
 
-    // Allouer de la mémoire pour la nouvelle URL nettoyée
+    // Allocate memory for the new cleaned URL
     size_t len = 0;
     len += parsed_url->scheme ? strlen(parsed_url->scheme) + 3 : 7; // "http://"
     len += parsed_url->host ? strlen(parsed_url->host) : 0;
@@ -148,7 +148,7 @@ char* clean_url(const char *url) {
         return NULL;
     }
 
-    // Reconstruire l'URL nettoyée
+    // Reconstruct the cleaned URL
     char *p = cleaned_url;
     if (parsed_url->scheme) {
         p += sprintf(p, "%s://", parsed_url->scheme);
@@ -178,7 +178,7 @@ char* clean_url(const char *url) {
     return cleaned_url;
 }
 
-/* Fonction pour afficher une URL décomposée (pour débogage) */
+/* Function to print a decomposed URL (for debugging) */
 void url_print(const Url *url) {
     if (!url) return;
     printf("Scheme: %s\n", url->scheme ? url->scheme : "(null)");
