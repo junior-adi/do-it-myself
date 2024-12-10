@@ -1,6 +1,43 @@
 /**
 * This is the `http.c` written from scratch without libssl-dev lib
 */ 
+
+/**
+ * @file http_c.c
+ * @brief Implementation of http requests functions in C.
+ *
+ * This file contains the implementation of http requests functions
+ *
+ * @author Junior ADI
+ * @date December 10th, 2024
+ * @location Yamoussoukro, Côte d'Ivoire, West Africa
+ *
+ * @details
+ * The URL parser is designed to be portable, robust, and modular. It includes
+ * functions to handle the following:
+ * - Initializing an empty URL structure.
+ * - Freeing memory associated with a URL structure.
+ * - Decoding an encoded URL string.
+ * - Parsing a URL string into its components.
+ * - Printing a parsed URL for debugging purposes.
+ *
+ * The implementation is self-contained within a single header file, making it
+ * easy to integrate into any C project.
+ *
+ * @license
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 #include "http.h"
 #include "url_parser.h"
 #include <stdio.h>
