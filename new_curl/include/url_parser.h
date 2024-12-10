@@ -1,3 +1,61 @@
+/**
+ * @file url_parser.h
+ * @brief Implementation of a standalone URL parser in C.
+ *
+ * This file contains the implementation of a URL parser that can be included
+ * in any C project without external dependencies. The parser handles various
+ * URL components including scheme, user, password, host, port, path, query,
+ * and fragment. It provides functions for URL creation, parsing, decoding,
+ * printing, and memory management.
+ *
+ * @author Junior ADI
+ * @date December 1st, 2024
+ * @location Yamoussoukro, Côte d'Ivoire, West Africa
+ *
+ * @details
+ * The URL parser is designed to be portable, robust, and modular. It includes
+ * functions to handle the following:
+ * - Initializing an empty URL structure.
+ * - Freeing memory associated with a URL structure.
+ * - Decoding an encoded URL string.
+ * - Parsing a URL string into its components.
+ * - Printing a parsed URL for debugging purposes.
+ *
+ * The implementation is self-contained within a single header file, making it
+ * easy to integrate into any C project.
+ *
+ * @example
+ * #include "url_parser.h"
+ *
+ * int main() {
+ *     const char *url_str = "https://user:pass@www.example.com:8080/path/to/resource?key=value#fragment";
+ *     Url *url = url_parse(url_str);
+ *
+ *     if (url) {
+ *         url_print(url);
+ *         url_free(url);
+ *     } else {
+ *         printf("Failed to parse URL\n");
+ *     }
+ *
+ *     return 0;
+ * }
+ *
+ *
+ * @license
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 #ifndef URL_PARSER_H
 #define URL_PARSER_H
 
