@@ -7,7 +7,7 @@
 
 ## Project Structure
 
-```
+```raw
 new_curl/
 |____include
 |         |____ url_parser.h
