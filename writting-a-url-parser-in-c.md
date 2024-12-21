@@ -47,7 +47,7 @@ feat: Implement standalone URL parser in C
 
 ```c
 /**
- * @file url_parser.c
+ * @file url_parser.h
  * @brief Implementation of a standalone URL parser in C.
  *
  * This file contains the implementation of a URL parser that can be included
