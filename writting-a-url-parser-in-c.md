@@ -29,7 +29,7 @@ URLs are crucial for locating resources on the internet. They allow users to nav
 
 ![image](https://github.com/user-attachments/assets/59544db6-fad8-426b-b2ae-c8dbbe066514)
 
-# Implement standalone URL parser in C
+# Implementing standalone URL parser in C
 
 feat: Implement standalone URL parser in C
 
